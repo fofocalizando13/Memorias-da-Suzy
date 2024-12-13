@@ -1,0 +1,35 @@
+import speech_recognition as sr
+
+
+def capturar_audio_continuamente() -> None:
+    """Captura áudio do microfone continuamente e exibe apenas o que for entendido."""
+    recognizer = sr.Recognizer()
+
+    # Configura o microfone
+    with sr.Microphone() as source:
+        print("Ajustando o microfone para o ambiente... Aguarde.")
+        recognizer.adjust_for_ambient_noise(source, duration=3)  # Calibração para reduzir ruídos
+        print("Microfone ajustado. Pode começar a falar.")
+
+        while True:
+            try:
+                # Captura o áudio do microfone continuamente
+                audio = recognizer.listen(source, timeout=None, phrase_time_limit=5)
+
+                # Tenta reconhecer o que foi falado
+                comando = recognizer.recognize_google(audio, language="pt-BR").lower()
+                # Exibe o comando sem pular linhas
+                print(comando, end=" ", flush=True)
+
+            except sr.UnknownValueError:
+                # Caso o comando sofra interferência ou não seja entendível
+                print(" [Não entendi... Ignorando]", end=" ", flush=True)
+            except Exception as e:
+                # Qualquer outro erro inesperado
+                print(f" [Erro: {e}]", end=" ", flush=True)
+
+
+# Execução
+if __name__ == "__main__":
+    print("Iniciando o reconhecimento de voz.")
+    capturar_audio_continuamente()

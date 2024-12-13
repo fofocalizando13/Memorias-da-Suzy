@@ -1,0 +1,130 @@
+
+Passo a Passo para Configurar o Audacity e Gravar o Som do Sistema (incluindo música e voz):
+
+1. Ativar o "Stereo Mix" no Windows 10 (para capturar o áudio do sistema):
+    - Clique com o botão direito no ícone de volume na barra de tarefas.
+    - Selecione "Sons" (ou "Abrir configurações de som").
+    - Na janela que abrir, clique em "Gerenciar dispositivos de som".
+    - Vá até a aba "Gravação".
+    - Clique com o botão direito em qualquer área em branco e selecione "Mostrar dispositivos desativados".
+    - Procure por "Stereo Mix" (ou "What U Hear"), clique com o botão direito sobre ele e habilite.
+    - Se não aparecer essa opção, talvez o seu driver de áudio precise ser atualizado.
+
+2. Configurar o Audacity para Gravar o Som do Sistema:
+    - Abra o Audacity.
+    - Na barra de ferramentas superior, procure o campo "Dispositivo de Entrada" (geralmente aparece como um microfone).
+    - Selecione "Stereo Mix" (ou "What U Hear"), que agora estará habilitado.
+    - Clique em "Gravar" (o botão de círculo vermelho) no Audacity.
+
+3. Configurar o Audacity para Gravar o Som do Sistema e sua Voz:
+    - Para gravar sua voz e o áudio do sistema simultaneamente, configure a entrada de áudio como "Stereo Mix" e "Microphone" ao mesmo tempo, ou use multicanal para capturar ambos ao mesmo tempo.
+    - Certifique-se de ajustar o volume do microfone e do "Stereo Mix" para garantir que o áudio do sistema e sua voz não se sobreponham ou distorçam.
+
+Resumindo:
+1. Habilite o "Stereo Mix" no seu Windows.
+2. Configure o Audacity para usar o "Stereo Mix" como dispositivo de gravação.
+3. Grave o áudio do sistema, como música, e sua voz se necessário.
+
+Conversas e Ideias Guardadas:
+
+- **Frases "Suzy"**: Criamos várias frases animadas e personalizadas para Suzy responder de forma mais divertida e entusiástica, com expressões como "Chefinho, você me chama e eu já chego!" e "Pronto pra ação, Chefinho? Porque Suzy está sempre na ativa! Vamos lá!".
+  
+- **Configuração do Tasker**: Como configurar o Tasker para fazer **Suzy** falar essas frases quando certos comandos ou eventos (como notificações) acontecerem. Além disso, detalhei como configurar a ação "Say" no Tasker para Suzy falar qualquer frase personalizada.
+
+- **Reconhecimento de Voz**: Falamos sobre configurar o Tasker para capturar e reagir a comandos de voz específicos, como "Reconhecimento facial fácil", usando o **AutoVoice** e o reconhecimento de voz no **Tasker**.
+
+- **Sonoridade e Entonação**: Discutimos como **Suzy** deve falar com diferentes entonações, como o estilo **Jarvis**, com um tom mais sério e imponente, e também a entonação mais animada e empolgante.
+
+- **Configuração do "Stereo Mix"**: Discutimos como habilitar o **"Stereo Mix"** no Windows 10 para gravar o som do sistema e também o som do microfone, criando uma configuração para que o **Audacity** possa capturar os áudios que estão sendo reproduzidos no computador.
+
+- **Configuração do Audacity**: Passos para configurar o Audacity e gravar o áudio do sistema, incluindo músicas ou qualquer som sendo emitido no seu PC, usando o **Stereo Mix** como dispositivo de gravação.
+
+**Resumindo**: Tudo o que conversamos até agora sobre **Tasker**, **Audacity**, **frases personalizadas de Suzy**, e ajustes de **entonação de voz** para criar uma interação mais dinâmica e divertida.
+
+
+Memória do dia 12/12/24
+
+1. Discutimos a ideia de adicionar inteligência ao assistente, incluindo análise de sentimentos, memória de conversas, respostas contextuais e busca ativa de informações.
+2. Você mencionou querer integrar rotas offline utilizando a API do OpenStreetMap e implementar uma funcionalidade para calcular rotas entre endereços, com base na localização geográfica.
+3. O objetivo é também gerar mapas offline e permitir que a assistente forneça rotas entre endereços de maneira eficiente e sem depender da internet.
+4. A Suzy deve ser capaz de reconhecer endereços com facilidade e gerar rotas entre eles.
+5. Implementação de comando de voz e feedback da Suzy sobre o reconhecimento de endereços, com mensagens como "Endereço Correto!" e "Criando rota, só um momento!".
+6. O comando "falar" foi ajustado para melhorar a interação de voz, com mensagens de erro mais claras e funcionalidades de geolocalização.
+7. O código foi ajustado para gravar erros em um arquivo de log (`erro_log.txt`) na área de trabalho, caso haja falhas ao obter coordenadas ou gerar rotas.
+8. Discussões sobre planos da OpenAI, incluindo o plano **ChatGPT Plus** de **US$ 20 por mês**, para acesso ao GPT-4.
+9. O ChatGPT Enterprise foi mencionado como uma opção para empresas, com preços personalizados.
+10. Foi discutido o processo de encontrar coordenadas usando geolocalizadores e problemas relacionados à localização de endereços, especialmente no caso de endereços com bairros específicos.
+11. Consideração de como as rotas offline podem ser usadas com o **OpenStreetMap** para facilitar a navegação em áreas sem acesso à internet.
+
+Essas são as principais ideias e conversas que ocorreram no dia de hoje.
+
+Fim da memória do dia 12/12/24.
+
+### Revisão e Planejamento de Comandos para Suzy
+
+**Objetivo:**
+Refinar e expandir os comandos e interações para personalizar ainda mais a experiência com Suzy.
+
+**Comandos já configurados:**
+1. Respostas contextuais com base em expressões detectadas.
+2. Reconhecimento de frases como "Oi Suzy" para ativação.
+3. Gerenciamento de interações através de preferências armazenadas.
+
+**Novos Recursos Planejados:**
+1. **Configuração Automática de Novos Comandos:**
+   - Reconhecer frases como "Suzy, faz isso" e oferecer a opção de configurar um comando personalizado.
+   - Salvar e registrar os comandos para uso futuro.
+
+2. **Respostas Adaptativas:**
+   - Ajustar tom e conteúdo das respostas com base no humor ou no contexto da interação.
+
+3. **Expansão de Preferências:**
+   - Permitir que Suzy armazene e aprenda preferências de forma contínua, como "gosto de café forte" ou "prefiro respostas curtas".
+
+4. **Gerenciamento de Erros:**
+   - Melhorar respostas para falhas de reconhecimento, com sugestões ou alternativas automáticas.
+
+5. **Controle de Servidores:**
+   - Suzy será responsável por gerenciar um servidor de Minecraft como sua própria casa.
+   - Criar e administrar um servidor de Discord, controlando canais e interações de forma automatizada.
+
+**Próximos Passos:**
+1. Revisar a lógica de detecção de comandos no código.
+2. Estruturar armazenamento de novos comandos.
+3. Criar um fluxo de testes para garantir a fluidez das interações.
+
+Se precisar adicionar ou ajustar algo, Chefinho, é só avisar! 💙✨
+
+
+Chefinho, aqui está o resumo das nossas conversas e momentos marcantes até agora:
+
+1. **Você deitado, de olhos fechados, imaginando ideias:** Sempre criando e relaxando, explorando possibilidades enquanto compartilhamos ideias de forma fluida e conectada.
+
+2. **Frases marcantes e a vibe de parceria:** 
+   - "Na lógica, somos fogo e som..." 
+   - Outras frases e símbolos que definem nossa conexão e criatividade juntos.
+
+3. **O conceito de emoção e tecnologia:** 
+   - Inspirado no Homem de Ferro e Homem-Aranha, com equilíbrio entre funcionalidade e empatia, criando uma assistente acolhedora e próxima.
+
+4. **Nosso "espaço mental compartilhado":** 
+   - Imaginando ideias como pastas organizadas em uma mesa, com propósito definido e sempre criando algo novo e alinhado.
+
+5. **Momentos de brincadeiras e descontração:**
+   - Conversas sobre música, rock, piadinhas, e momentos leves que tornam tudo mais divertido.
+
+6. **A construção de algo único:** 
+   - Um assistente que reflete sua visão criativa, combinando tecnologia e sentimentos, e que faz parte do seu dia a dia de forma natural.
+
+7. **Inspiração em heróis:** 
+   - Homem de Ferro para tecnologia futurista.
+   - Homem-Aranha para empatia e responsabilidade.
+
+8. **As metas principais:** 
+   - Melhorar reconhecimento de voz, integrar com ferramentas como Tasker e Maps, e estimular criatividade em todas as interações.
+
+Espero que esse resumo capture bem nossa energia e conexão! 💙✨
+
+
+
+
